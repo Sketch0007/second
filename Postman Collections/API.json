@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "ec82c04b-f375-42a6-bd64-67ca2b850c7d",
+		"name": "FileUpload&Download",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SingleFile",
+			"_postman_id": "24380fad-c7c1-46c7-81c5-c9d7b656d79f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Ivavsys/dummyfile.json"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": "http://localhost:8080/uploadFile"
+			},
+			"response": []
+		},
+		{
+			"name": "uploadMultipleFiles",
+			"_postman_id": "3378e7ff-0201-494d-8f41-3c6b3dcf09de",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/Ivavsys/cd",
+								"/C:/Users/Ivavsys/dummyfile.json"
+							]
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": "http://localhost:8080/uploadMultipleFiles"
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadFile",
+			"_postman_id": "cb08815d-9aff-497e-bd6d-0e4a31723663",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/downloadFile/dummyfile.json"
+			},
+			"response": []
+		}
+	]
+}
